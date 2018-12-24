@@ -1,5 +1,7 @@
 # Insight API
 
+Require and install for https://github.com/pungotoken/insight-ui-komodo.git, please to full install Insigth read instruction [https://github.com/pungotoken/insight-ui-komodo/blob/master/README.md](https://github.com/pungotoken/insight-ui-komodo/blob/master/README.md)
+
 A Komodo blockchain REST and web socket API service for [Bitcore Node](https://github.com/bitpay/bitcore-node).
 
 This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/bitpay/insight-ui.
