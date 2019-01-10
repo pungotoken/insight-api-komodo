@@ -1,3 +1,5 @@
+![Pungo Token](https://i.ibb.co/T0cFLpx/token-regular-small.png)
+
 # Insight API
 
 Require and install for https://github.com/pungotoken/insight-ui-komodo.git, please to full install Insigth read instruction [https://github.com/pungotoken/insight-ui-komodo/blob/master/README.md](https://github.com/pungotoken/insight-ui-komodo/blob/master/README.md)
@@ -6,10 +8,38 @@ A Komodo blockchain REST and web socket API service for [Bitcore Node](https://g
 
 This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/bitpay/insight-ui.
 
+## Development Resources
+
+- PungoToken Website: [https://pungotoken.com](https://pungotoken.com/)
+- PungoToken Blockexplorer: [https://explorer.pungotoken.com](https://explorer.pungotoken.com)
+- PungoToken Telegram: [https://t.me/pungotalk](https://t.me/pungotalk)
+- PungoToken Node Addresses:  190.114.254.103, 190.114.254.104
+- PungoToken Electrum Servers Addresses: electrum1.pungo.cloud:10002 electrum2.pungo.cloud:10002
+
 ## Getting Started
 
-```bashl
+### Dependencies
+
+Before installing Insight API you should install NodeJS, NPM manager and Bitcore Node:
+
+```bash
+#The following packages are needed:
+sudo apt-get install -yq nodejs=4.2.6~dfsg-1ubuntu4.2 npm libzmq3-dev
+
 npm install -g bitcore-node@latest
+```
+
+### Prerequisites
+
+- [Bitcore Node 3.x](https://github.com/bitpay/bitcore-node)
+
+**Note:** You can use an existing Komodo data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `komodo.conf`, as well as a few other additional fields.
+
+### Installation
+
+After installing dependencies above run:
+
+```bash
 bitcore-node create mynode
 cd mynode
 bitcore-node install insight-api-komodo
@@ -17,12 +47,6 @@ bitcore-node start
 ```
 
 The API endpoints will be available by default at: `http://localhost:3001/insight-api/`
-
-## Prerequisites
-
-- [Bitcore Node 3.x](https://github.com/bitpay/bitcore-node)
-
-**Note:** You can use an existing Komodo data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `komodo.conf`, as well as a few other additional fields.
 
 ## Notes on Upgrading from v0.3
 
